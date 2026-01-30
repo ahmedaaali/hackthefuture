@@ -7,9 +7,18 @@ It shows a centered logo, a top nav (Home / Log in), and a placeholder login pag
 - Node.js 18+ installed
 
 ## Setup & Run (localhost)
+
+## Linux
 ```bash
 sudo apt install npm -y
+```
 
+## MAC
+```bash
+sudo brew install npm
+```
+
+```bash
 cd HackTheFutures
 npm install
 npm start
