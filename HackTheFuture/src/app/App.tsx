@@ -161,7 +161,9 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-6 py-16 relative z-10">
+      <main
+        className={`relative z-10 ${step === 'upload' ? 'w-full max-w-none px-6 py-10' : 'max-w-6xl mx-auto px-6 py-16'}`}
+      >
         {/* Error Display */}
         {error && (
           <motion.div
