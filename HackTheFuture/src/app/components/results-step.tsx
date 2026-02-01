@@ -34,8 +34,8 @@ export function ResultsStep({ formData, results, onStartOver }: ResultsStepProps
     >
       {/* Success Header */}
       <motion.div variants={itemVariants}>
-        <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 p-8 mb-8 overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-green-400/20 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-teal-100/50 p-8 mb-8 overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-emerald-400/20 to-transparent rounded-full blur-3xl pointer-events-none" />
           
           <div className="flex items-start justify-between relative">
             <div className="flex items-start gap-5">
@@ -76,13 +76,13 @@ export function ResultsStep({ formData, results, onStartOver }: ResultsStepProps
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-teal-100 text-teal-700 rounded-lg text-sm font-medium">
                     <Sparkles className="w-3.5 h-3.5" />
-                    {formData.caregiverType?.replace('-', ' ').split(' ').map(word => 
+                    {formData.caregiverType?.replace('-', ' ').split(' ').map((word: string) =>
                       word.charAt(0).toUpperCase() + word.slice(1)
                     ).join(' ')}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-100 text-blue-700 rounded-lg text-sm font-medium">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cyan-100 text-cyan-700 rounded-lg text-sm font-medium">
                     <FileText className="w-3.5 h-3.5" />
                     {formData.explanationLevel?.charAt(0).toUpperCase() + formData.explanationLevel?.slice(1)} Mode
                   </span>
@@ -116,12 +116,12 @@ export function ResultsStep({ formData, results, onStartOver }: ResultsStepProps
 
       {/* Summary Section */}
       <motion.div variants={itemVariants}>
-        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 p-8 mb-6 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-blue-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-          
+        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-teal-100/50 p-8 mb-6 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-teal-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+
           <div className="flex items-center gap-3 mb-6 relative">
-            <motion.div 
-              className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg"
+            <motion.div
+              className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-teal-500/25"
               whileHover={{ rotate: [0, -10, 10, -10, 0] }}
               transition={{ duration: 0.5 }}
             >
@@ -142,12 +142,12 @@ export function ResultsStep({ formData, results, onStartOver }: ResultsStepProps
 
       {/* Daily Care Checklist */}
       <motion.div variants={itemVariants}>
-        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 p-8 mb-6 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-green-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-          
+        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-teal-100/50 p-8 mb-6 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-emerald-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+
           <div className="flex items-center gap-3 mb-6 relative">
-            <motion.div 
-              className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg"
+            <motion.div
+              className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center shadow-lg shadow-emerald-500/25"
               whileHover={{ rotate: [0, -10, 10, -10, 0] }}
               transition={{ duration: 0.5 }}
             >
@@ -156,17 +156,17 @@ export function ResultsStep({ formData, results, onStartOver }: ResultsStepProps
             <h3 className="text-xl font-bold text-gray-900">Daily Care Checklist</h3>
           </div>
           <div className="space-y-3 relative">
-            {results.checklist.map((item, index) => (
+            {results.checklist.map((item: string, index: number) => (
               <motion.div
                 key={index}
-                className="group flex gap-4 p-4 rounded-xl hover:bg-green-50 transition-colors cursor-pointer"
+                className="group flex gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors cursor-pointer"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 + index * 0.05 }}
                 whileHover={{ x: 4 }}
               >
-                <motion.div 
-                  className="w-6 h-6 rounded-lg border-2 border-gray-300 group-hover:border-green-500 flex-shrink-0 mt-0.5 transition-colors"
+                <motion.div
+                  className="w-6 h-6 rounded-lg border-2 border-gray-300 group-hover:border-emerald-500 flex-shrink-0 mt-0.5 transition-colors"
                   whileHover={{ scale: 1.1 }}
                 />
                 <span className="text-gray-700 leading-relaxed">{item}</span>
@@ -198,7 +198,7 @@ export function ResultsStep({ formData, results, onStartOver }: ResultsStepProps
             <h3 className="text-xl font-bold text-gray-900">What to Watch Out For</h3>
           </div>
           <div className="space-y-3 relative">
-            {results.warnings.map((warning, index) => (
+            {results.warnings.map((warning: string, index: number) => (
               <motion.div
                 key={index}
                 className="flex gap-4 p-5 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-amber-200 shadow-sm"
@@ -227,12 +227,12 @@ export function ResultsStep({ formData, results, onStartOver }: ResultsStepProps
 
       {/* Questions for Doctor */}
       <motion.div variants={itemVariants}>
-        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 p-8 mb-8 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-purple-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-          
+        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-teal-100/50 p-8 mb-8 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-sky-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+
           <div className="flex items-center gap-3 mb-6 relative">
-            <motion.div 
-              className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shadow-lg"
+            <motion.div
+              className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500 to-blue-500 flex items-center justify-center shadow-lg shadow-sky-500/25"
               whileHover={{ rotate: [0, -10, 10, -10, 0] }}
               transition={{ duration: 0.5 }}
             >
@@ -241,17 +241,17 @@ export function ResultsStep({ formData, results, onStartOver }: ResultsStepProps
             <h3 className="text-xl font-bold text-gray-900">Questions to Ask the Doctor</h3>
           </div>
           <div className="space-y-3 relative">
-            {results.questions.map((question, index) => (
+            {results.questions.map((question: string, index: number) => (
               <motion.div
                 key={index}
-                className="group flex gap-4 p-4 rounded-xl hover:bg-purple-50 transition-colors"
+                className="group flex gap-4 p-4 rounded-xl hover:bg-sky-50 transition-colors"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 + index * 0.05 }}
                 whileHover={{ x: 4 }}
               >
-                <motion.div 
-                  className="w-8 h-8 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 text-white flex items-center justify-center flex-shrink-0 font-bold shadow-md"
+                <motion.div
+                  className="w-8 h-8 rounded-xl bg-gradient-to-br from-sky-500 to-blue-500 text-white flex items-center justify-center flex-shrink-0 font-bold shadow-md"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                 >
                   {index + 1}
@@ -264,13 +264,13 @@ export function ResultsStep({ formData, results, onStartOver }: ResultsStepProps
       </motion.div>
 
       {/* Action Buttons */}
-      <motion.div 
+      <motion.div
         className="flex gap-4"
         variants={itemVariants}
       >
         <motion.button
           onClick={onStartOver}
-          className="flex-1 px-8 py-4 border-2 border-gray-300 hover:border-gray-400 hover:bg-white/80 text-gray-700 rounded-2xl font-semibold transition-all backdrop-blur-sm"
+          className="flex-1 px-8 py-4 border-2 border-gray-300 hover:border-teal-400 hover:bg-white/80 text-gray-700 rounded-2xl font-semibold transition-all backdrop-blur-sm"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
@@ -278,7 +278,7 @@ export function ResultsStep({ formData, results, onStartOver }: ResultsStepProps
         </motion.button>
         <motion.button
           onClick={() => window.print()}
-          className="flex-1 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-2xl font-semibold shadow-xl shadow-indigo-500/30 transition-all"
+          className="flex-1 px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white rounded-2xl font-semibold shadow-xl shadow-teal-500/30 transition-all"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
