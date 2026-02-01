@@ -85,69 +85,47 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 relative overflow-hidden">
-      {/* Animated background elements */}
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-cyan-50/30 to-sky-50 relative overflow-hidden">
+      {/* Lightweight CSS-animated background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute top-0 -right-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
-          animate={{
-            x: [0, -100, 0],
-            y: [0, 100, 0],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
-          animate={{
-            x: [0, -50, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            ease: "easeInOut"
+        {/* Static gradient orbs with subtle CSS animation */}
+        <div className="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-br from-teal-400/20 to-cyan-300/10 rounded-full blur-3xl animate-[pulse_8s_ease-in-out_infinite]" />
+        <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-gradient-to-br from-sky-400/15 to-blue-300/10 rounded-full blur-3xl animate-[pulse_10s_ease-in-out_infinite_1s]" />
+        <div className="absolute bottom-[-10%] left-[20%] w-[400px] h-[400px] bg-gradient-to-br from-emerald-400/15 to-teal-300/10 rounded-full blur-3xl animate-[pulse_9s_ease-in-out_infinite_2s]" />
+
+        {/* Subtle grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgb(0 128 128) 1px, transparent 0)`,
+            backgroundSize: '48px 48px',
           }}
         />
       </div>
 
       {/* Header */}
-      <header className="border-b bg-white/70 backdrop-blur-xl sticky top-0 z-50 shadow-sm">
+      <header className="border-b border-teal-100 bg-white/70 backdrop-blur-xl sticky top-0 z-50 shadow-sm">
         <div className="max-w-6xl mx-auto px-6 py-5">
-          <motion.div 
+          <motion.div
             className="flex items-center gap-3"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
-              className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 flex items-center justify-center shadow-lg"
+            <motion.div
+              className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-500 via-cyan-500 to-sky-500 flex items-center justify-center shadow-lg shadow-teal-500/25"
               whileHover={{ scale: 1.05, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
             >
               <Sparkles className="w-7 h-7 text-white" />
               <motion.div
-                className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-400 to-purple-400 opacity-0"
-                whileHover={{ opacity: 0.3 }}
+                className="absolute inset-0 rounded-2xl bg-white/20"
+                animate={{ opacity: [0, 0.3, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
               />
             </motion.div>
             <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-xl font-bold bg-gradient-to-r from-teal-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent">
                 MediClarify
               </h1>
               <p className="text-sm text-gray-600">Healthcare documents, simplified</p>
@@ -193,15 +171,12 @@ function App() {
               className="flex items-center justify-center min-h-[500px]"
             >
               <div className="text-center">
-                <motion.div
-                  className="relative w-24 h-24 mx-auto mb-8"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                >
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 opacity-20 blur-xl" />
-                  <div className="absolute inset-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 animate-pulse" />
-                  <Sparkles className="absolute inset-0 m-auto w-12 h-12 text-white" />
-                </motion.div>
+                <div className="relative w-24 h-24 mx-auto mb-8">
+                  {/* Simple CSS spinner */}
+                  <div className="absolute inset-0 rounded-full border-4 border-teal-100 border-t-teal-500 animate-spin" />
+                  <div className="absolute inset-3 rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 animate-pulse" />
+                  <Sparkles className="absolute inset-0 m-auto w-8 h-8 text-white z-10" />
+                </div>
                 <motion.h3
                   className="text-2xl font-semibold text-gray-900 mb-2"
                   initial={{ opacity: 0, y: 10 }}
@@ -218,25 +193,11 @@ function App() {
                 >
                   Our AI is reading and simplifying the medical information
                 </motion.p>
-                <motion.div
-                  className="mt-8 flex gap-2 justify-center"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.6 }}
-                >
-                  {[0, 1, 2].map((i) => (
-                    <motion.div
-                      key={i}
-                      className="w-2 h-2 rounded-full bg-indigo-600"
-                      animate={{ scale: [1, 1.5, 1], opacity: [0.3, 1, 0.3] }}
-                      transition={{
-                        duration: 1.5,
-                        repeat: Infinity,
-                        delay: i * 0.2,
-                      }}
-                    />
-                  ))}
-                </motion.div>
+                <div className="mt-8 flex gap-2 justify-center">
+                  <div className="w-2 h-2 rounded-full bg-teal-500 animate-bounce" style={{ animationDelay: '0ms' }} />
+                  <div className="w-2 h-2 rounded-full bg-teal-500 animate-bounce" style={{ animationDelay: '150ms' }} />
+                  <div className="w-2 h-2 rounded-full bg-teal-500 animate-bounce" style={{ animationDelay: '300ms' }} />
+                </div>
               </div>
             </motion.div>
           ) : (

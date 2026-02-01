@@ -1,0 +1,124 @@
+HEARTLAND CARDIOVASCULAR ASSOCIATES
+Advanced Heart Care Center
+500 Cardiac Way, Suite 200
+Chicago, IL 60611
+Tel: (555) 789-0123 | Fax: (555) 789-0124
+
+CARDIOLOGY FOLLOW-UP VISIT NOTE
+
+Patient: Robert J. Williams
+DOB: 08/22/1958 (Age: 67)
+MRN: CV-2024-11892
+Date of Visit: January 28, 2026
+Referring Physician: Dr. James Morrison, Internal Medicine
+Cardiologist: Dr. Michael Patel, MD, FACC
+
+CHIEF COMPLAINT:
+Follow-up visit 6 weeks post-percutaneous coronary intervention (PCI) with drug-eluting stent placement to the left anterior descending artery (LAD).
+
+CARDIAC HISTORY:
+- Acute anterior STEMI (December 15, 2025)
+- Successful primary PCI with single drug-eluting stent to proximal LAD
+- Peak troponin I: 45.2 ng/mL
+- Estimated ejection fraction post-MI: 40-45% (moderate reduction)
+- Hypertension (15 years)
+- Hyperlipidemia
+- Type 2 Diabetes Mellitus (8 years)
+- Former smoker (quit 2020, 30 pack-year history)
+
+CURRENT MEDICATIONS:
+1. Aspirin 81mg daily - LIFELONG, do not stop
+2. Ticagrelor (Brilinta) 90mg twice daily - Critical: take for minimum 12 months
+3. Metoprolol Succinate ER 50mg daily
+4. Lisinopril 10mg daily
+5. Atorvastatin 80mg at bedtime
+6. Metformin 1000mg twice daily
+7. Nitroglycerin 0.4mg sublingual PRN chest pain
+
+REVIEW OF SYSTEMS:
+Patient reports overall improvement in energy level. Denies chest pain, shortness of breath at rest, orthopnea, or paroxysmal nocturnal dyspnea. Notes mild fatigue with moderate exertion (climbing 2 flights of stairs). No palpitations, syncope, or presyncope. Lower extremity edema resolved. Tolerating medications well. Wife reports he has been compliant with cardiac rehab sessions (attending 2x/week).
+
+PHYSICAL EXAMINATION:
+- Blood Pressure: 128/78 mmHg (Goal <130/80)
+- Heart Rate: 64 bpm, regular
+- Weight: 198 lbs (down 8 lbs from admission)
+- Oxygen Saturation: 97% on room air
+- Cardiac: Regular rate and rhythm, no murmurs, rubs, or gallops
+- Lungs: Clear to auscultation bilaterally
+- Extremities: No peripheral edema, 2+ dorsalis pedis pulses bilaterally
+- Right radial access site: Well-healed, no hematoma
+
+RECENT LABORATORY RESULTS (01/25/2026):
+- LDL Cholesterol: 68 mg/dL (Goal <70 - AT TARGET)
+- HDL Cholesterol: 42 mg/dL
+- Triglycerides: 156 mg/dL
+- HbA1c: 7.2% (improved from 8.1%)
+- Creatinine: 1.1 mg/dL (stable)
+- BNP: 180 pg/mL (improved from 450 pg/mL at discharge)
+
+ECHOCARDIOGRAM (01/20/2026):
+- Left ventricular ejection fraction: 45% (improved from 40%)
+- Mild hypokinesis of anterior wall (improved)
+- No significant valvular abnormalities
+- No pericardial effusion
+
+ASSESSMENT AND PLAN:
+
+1. Coronary Artery Disease, s/p LAD DES
+   - Continue dual antiplatelet therapy (DAPT) - CRITICAL
+   - Aspirin 81mg daily indefinitely
+   - Ticagrelor 90mg BID - must continue for 12 months minimum (until December 2026)
+   - DO NOT STOP THESE MEDICATIONS without cardiology approval - risk of stent thrombosis
+
+2. Ischemic Cardiomyopathy with reduced EF
+   - EF improving (40% → 45%), continue current medical therapy
+   - Continue Metoprolol and Lisinopril
+   - Consider repeat echo in 3 months
+
+3. Hypertension - At goal, continue current regimen
+
+4. Hyperlipidemia - LDL at goal on high-intensity statin
+
+5. Type 2 Diabetes - Improved control, continue Metformin
+
+6. Cardiac Rehabilitation
+   - Excellent progress, continue program
+   - Target: Complete 36 sessions
+   - May gradually increase home activity
+
+ACTIVITY RECOMMENDATIONS:
+- Continue cardiac rehabilitation program
+- Walking encouraged: Start with 15-20 minutes daily, gradually increase
+- Avoid heavy lifting (>25 lbs) for 3 months post-procedure
+- Sexual activity may resume when able to climb 2 flights of stairs without symptoms
+- No driving for commercial vehicles; regular driving permitted
+- Air travel permitted after 2 weeks post-discharge
+
+DIETARY RECOMMENDATIONS:
+- Heart-healthy diet: Low sodium (<2000mg/day), low saturated fat
+- Mediterranean diet pattern encouraged
+- Limit alcohol to 1 drink/day maximum
+- Diabetic diet: Consistent carbohydrate intake
+
+EMERGENCY INSTRUCTIONS - CALL 911 IMMEDIATELY IF:
+- Chest pain or pressure lasting >5 minutes not relieved by nitroglycerin
+- Severe shortness of breath
+- Fainting or near-fainting
+- Rapid or irregular heartbeat with dizziness
+
+CALL OFFICE IF:
+- Mild chest discomfort with activity
+- Increasing fatigue or shortness of breath
+- Weight gain >3 lbs in one day or >5 lbs in one week
+- Persistent dizziness
+- Bruising or bleeding concerns
+
+FOLLOW-UP:
+- Cardiology: 3 months (April 2026)
+- Primary Care: 4 weeks
+- Cardiac Rehab: Continue 2x weekly
+
+Electronically signed by:
+Michael Patel, MD, FACC
+Board Certified Cardiovascular Disease
+01/28/2026 16:45

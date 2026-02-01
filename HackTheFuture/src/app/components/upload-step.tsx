@@ -56,7 +56,7 @@ export function UploadStep({ onFileUpload }: UploadStepProps) {
         transition={{ duration: 0.6 }}
       >
         <motion.div
-          className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 rounded-full text-indigo-700 text-sm font-medium mb-6"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 rounded-full text-teal-700 text-sm font-medium mb-6"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
@@ -66,7 +66,7 @@ export function UploadStep({ onFileUpload }: UploadStepProps) {
         </motion.div>
         <h2 className="text-4xl font-bold text-gray-900 mb-4">
           Transform Medical Jargon into
-          <span className="block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <span className="block bg-gradient-to-r from-teal-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent">
             Clear Instructions
           </span>
         </h2>
@@ -80,9 +80,10 @@ export function UploadStep({ onFileUpload }: UploadStepProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
-        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 p-10 relative overflow-hidden">
+        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-teal-100/50 p-10 relative overflow-hidden">
           {/* Decorative gradient overlay */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-teal-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-cyan-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
           
           <AnimatePresence mode="wait">
             {!selectedFile ? (
@@ -96,8 +97,8 @@ export function UploadStep({ onFileUpload }: UploadStepProps) {
                 <div
                   className={`relative border-2 border-dashed rounded-2xl p-16 text-center transition-all duration-300 ${
                     dragActive
-                      ? 'border-indigo-500 bg-indigo-50/50 scale-[1.02]'
-                      : 'border-gray-300 hover:border-indigo-400 hover:bg-gray-50/50'
+                      ? 'border-teal-500 bg-teal-50/50 scale-[1.02]'
+                      : 'border-gray-300 hover:border-teal-400 hover:bg-teal-50/30'
                   }`}
                   onDragEnter={handleDrag}
                   onDragLeave={handleDrag}
@@ -113,7 +114,7 @@ export function UploadStep({ onFileUpload }: UploadStepProps) {
                   />
 
                   <motion.div
-                    className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg"
+                    className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-teal-500/25"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -129,13 +130,13 @@ export function UploadStep({ onFileUpload }: UploadStepProps) {
 
                   <motion.button
                     onClick={() => inputRef.current?.click()}
-                    className="group relative px-8 py-3.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl font-medium shadow-lg shadow-indigo-500/25 transition-all overflow-hidden"
+                    className="group relative px-8 py-3.5 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white rounded-xl font-medium shadow-lg shadow-teal-500/25 transition-all overflow-hidden"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <span className="relative z-10">Select File</span>
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity"
+                      className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-sky-600 opacity-0 group-hover:opacity-100 transition-opacity"
                       layoutId="buttonBackground"
                     />
                   </motion.button>
@@ -150,14 +151,14 @@ export function UploadStep({ onFileUpload }: UploadStepProps) {
                 transition={{ duration: 0.3 }}
                 className="space-y-8"
               >
-                <motion.div 
+                <motion.div
                   className="relative group"
                   layoutId="file-card"
                 >
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity" />
-                  <div className="relative flex items-start gap-4 p-6 bg-white rounded-2xl border border-indigo-200">
-                    <motion.div 
-                      className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0 shadow-lg"
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity" />
+                  <div className="relative flex items-start gap-4 p-6 bg-white rounded-2xl border border-teal-200">
+                    <motion.div
+                      className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-teal-500/25"
                       whileHover={{ rotate: [0, -10, 10, -10, 0] }}
                       transition={{ duration: 0.5 }}
                     >
@@ -193,7 +194,7 @@ export function UploadStep({ onFileUpload }: UploadStepProps) {
                   </motion.button>
                   <motion.button
                     onClick={handleSubmit}
-                    className="flex-1 px-6 py-3.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl font-medium shadow-lg shadow-indigo-500/25 transition-all"
+                    className="flex-1 px-6 py-3.5 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white rounded-xl font-medium shadow-lg shadow-teal-500/25 transition-all"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >

@@ -91,7 +91,7 @@ export function SelectionStep({ fileName, onComplete, onBack }: SelectionStepPro
         transition={{ duration: 0.5 }}
       >
         <motion.div
-          className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 rounded-full text-purple-700 text-sm font-medium mb-4"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 rounded-full text-teal-700 text-sm font-medium mb-4"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1 }}
@@ -122,12 +122,12 @@ export function SelectionStep({ fileName, onComplete, onBack }: SelectionStepPro
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 p-8 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-purple-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-            
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-teal-100/50 p-8 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-teal-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+
             <div className="flex items-center gap-3 mb-6 relative">
-              <motion.div 
-                className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg"
+              <motion.div
+                className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-teal-500/25"
                 whileHover={{ rotate: [0, -10, 10, -10, 0] }}
                 transition={{ duration: 0.5 }}
               >
@@ -201,12 +201,12 @@ export function SelectionStep({ fileName, onComplete, onBack }: SelectionStepPro
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 p-8 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-blue-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-            
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-teal-100/50 p-8 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-cyan-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+
             <div className="flex items-center gap-3 mb-6 relative">
-              <motion.div 
-                className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center shadow-lg"
+              <motion.div
+                className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-sky-500 flex items-center justify-center shadow-lg shadow-cyan-500/25"
                 whileHover={{ rotate: [0, -10, 10, -10, 0] }}
                 transition={{ duration: 0.5 }}
               >
@@ -276,7 +276,7 @@ export function SelectionStep({ fileName, onComplete, onBack }: SelectionStepPro
           disabled={!caregiverType || !explanationLevel}
           className={`relative w-full px-8 py-4 rounded-2xl font-semibold text-lg transition-all overflow-hidden ${
             caregiverType && explanationLevel
-              ? 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-2xl shadow-indigo-500/40'
+              ? 'bg-gradient-to-r from-teal-600 via-cyan-600 to-sky-600 text-white shadow-2xl shadow-teal-500/40'
               : 'bg-gray-200 text-gray-400 cursor-not-allowed'
           }`}
           initial={{ opacity: 0, y: 20 }}
@@ -287,7 +287,7 @@ export function SelectionStep({ fileName, onComplete, onBack }: SelectionStepPro
         >
           {caregiverType && explanationLevel && (
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600"
+              className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-teal-400 to-sky-500"
               animate={{
                 x: ['-100%', '100%'],
               }}

@@ -1,0 +1,64 @@
+MERCY GENERAL HOSPITAL
+Department of Pediatrics
+123 Medical Center Drive, Springfield, IL 62701
+Phone: (555) 123-4567
+
+DISCHARGE SUMMARY
+
+Patient Name: Emily Thompson
+Date of Birth: March 15, 2019
+Age: 5 years
+MRN: 2024-78432
+Admission Date: January 25, 2026
+Discharge Date: January 29, 2026
+Attending Physician: Dr. Sarah Chen, MD, FAAP
+Primary Diagnosis: Community-Acquired Pneumonia (CAP), Right Lower Lobe
+
+HISTORY OF PRESENT ILLNESS:
+Emily is a 5-year-old female with no significant past medical history who presented to the ED with a 4-day history of fever (Tmax 103.2°F), productive cough, and decreased appetite. Mother reports Emily had rhinorrhea and mild cough starting approximately one week prior to admission. Over the past 48 hours, she developed increased work of breathing and was noted to be more lethargic.
+
+HOSPITAL COURSE:
+Patient was admitted for IV antibiotics and supportive care. Chest X-ray confirmed right lower lobe consolidation consistent with bacterial pneumonia. Blood cultures were obtained and remained negative. She was started on IV Ceftriaxone 50mg/kg/day and transitioned to oral Amoxicillin-Clavulanate on hospital day 3 when tolerating oral intake. Supplemental oxygen via nasal cannula was required for the first 48 hours (max 2L/min) and weaned successfully. Fever resolved by day 2. Patient demonstrated significant clinical improvement with improved appetite and activity level.
+
+DISCHARGE MEDICATIONS:
+1. Amoxicillin-Clavulanate (Augmentin) 400mg/5mL suspension
+   - Dose: 7mL (280mg amoxicillin component) by mouth twice daily
+   - Duration: 7 days (to complete 10-day total antibiotic course)
+   - Take with food to reduce stomach upset
+
+2. Acetaminophen (Tylenol) 160mg/5mL
+   - Dose: 7.5mL by mouth every 4-6 hours as needed for fever >100.4°F or discomfort
+   - Do not exceed 5 doses in 24 hours
+
+3. Continue home medications: None
+
+DISCHARGE INSTRUCTIONS:
+1. Activity: Rest encouraged for the first 2-3 days. May gradually return to normal activity as tolerated. No daycare or school until fever-free for 24 hours without fever-reducing medication and completing at least 48 hours of antibiotics.
+
+2. Diet: Encourage fluids. Regular diet as tolerated. Small, frequent meals may be better tolerated initially.
+
+3. Follow-up:
+   - Primary care physician: Dr. Martinez within 5-7 days
+   - Call to schedule: (555) 234-5678
+   - Repeat chest X-ray in 4-6 weeks if recommended by PCP
+
+RETURN TO EMERGENCY DEPARTMENT IF:
+- Fever >102°F that does not respond to acetaminophen
+- Increased difficulty breathing or fast breathing
+- Worsening cough or coughing up blood
+- Unable to keep down fluids or medications
+- Decreased urination (less than 3 wet diapers/day or no urination for 8+ hours)
+- Extreme lethargy or difficulty waking
+- Blue discoloration of lips or fingernails
+
+VITAL SIGNS AT DISCHARGE:
+Temperature: 98.6°F
+Heart Rate: 92 bpm
+Respiratory Rate: 22/min
+Blood Pressure: 95/60 mmHg
+Oxygen Saturation: 98% on room air
+
+Dictated by: Dr. Sarah Chen, MD, FAAP
+Electronically signed: 01/29/2026 14:32
+
+CC: Dr. Maria Martinez, Pediatrics (Primary Care)
