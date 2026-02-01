@@ -21,6 +21,8 @@ export interface AIResults {
   questions: string[];
 }
 
+const API_URL = 'http://localhost:3001';
+
 function App() {
   const [step, setStep] = useState<'upload' | 'selection' | 'results'>('upload');
   const [formData, setFormData] = useState<FormData>({
@@ -29,21 +31,46 @@ function App() {
     explanationLevel: null,
   });
   const [isProcessing, setIsProcessing] = useState(false);
+  const [aiResults, setAiResults] = useState<AIResults | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleFileUpload = (file: File) => {
     setFormData({ ...formData, file });
+    setError(null);
     setStep('selection');
   };
 
-  const handleSelectionComplete = (caregiverType: CaregiverType, explanationLevel: ExplanationLevel) => {
+  const handleSelectionComplete = async (caregiverType: CaregiverType, explanationLevel: ExplanationLevel) => {
     setFormData({ ...formData, caregiverType, explanationLevel });
     setIsProcessing(true);
-    
-    // Simulate AI processing
-    setTimeout(() => {
-      setIsProcessing(false);
+    setError(null);
+
+    try {
+      // Create form data for API request
+      const apiFormData = new window.FormData();
+      apiFormData.append('file', formData.file!);
+      apiFormData.append('caregiverType', caregiverType);
+      apiFormData.append('explanationLevel', explanationLevel);
+
+      const response = await fetch(`${API_URL}/api/analyze`, {
+        method: 'POST',
+        body: apiFormData,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to analyze document');
+      }
+
+      const results: AIResults = await response.json();
+      setAiResults(results);
       setStep('results');
-    }, 2500);
+    } catch (err) {
+      console.error('Error analyzing document:', err);
+      setError(err instanceof Error ? err.message : 'An unexpected error occurred');
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   const handleStartOver = () => {
@@ -52,6 +79,8 @@ function App() {
       caregiverType: null,
       explanationLevel: null,
     });
+    setAiResults(null);
+    setError(null);
     setStep('upload');
   };
 
@@ -129,6 +158,31 @@ function App() {
 
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-6 py-16 relative z-10">
+        {/* Error Display */}
+        {error && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-8 p-4 bg-red-50 border border-red-200 rounded-2xl"
+          >
+            <div className="flex items-start gap-3">
+              <div className="w-6 h-6 rounded-full bg-red-500 flex items-center justify-center flex-shrink-0">
+                <span className="text-white text-sm font-bold">!</span>
+              </div>
+              <div>
+                <p className="font-medium text-red-900">Error processing document</p>
+                <p className="text-sm text-red-700 mt-1">{error}</p>
+                <button
+                  onClick={handleStartOver}
+                  className="mt-3 text-sm font-medium text-red-700 hover:text-red-900 underline"
+                >
+                  Try again
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
         <AnimatePresence mode="wait">
           {isProcessing ? (
             <motion.div
@@ -223,6 +277,7 @@ function App() {
                 >
                   <ResultsStep
                     formData={formData}
+                    results={aiResults!}
                     onStartOver={handleStartOver}
                   />
                 </motion.div>
@@ -239,7 +294,7 @@ function App() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          This is a demo with mock AI responses. Not for actual medical use.
+          AI-powered analysis for educational purposes. Not for actual medical decisions.
         </motion.p>
       </footer>
     </div>

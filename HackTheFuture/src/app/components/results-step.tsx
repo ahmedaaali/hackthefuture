@@ -1,15 +1,14 @@
 import { FileText, CheckCircle2, AlertTriangle, HelpCircle, RotateCcw, Download, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
-import type { FormData } from '@/app/App';
-import { getMockResults } from '@/app/utils/mock-data';
+import type { FormData, AIResults } from '@/app/App';
 
 interface ResultsStepProps {
   formData: FormData;
+  results: AIResults;
   onStartOver: () => void;
 }
 
-export function ResultsStep({ formData, onStartOver }: ResultsStepProps) {
-  const results = getMockResults(formData.caregiverType!, formData.explanationLevel!);
+export function ResultsStep({ formData, results, onStartOver }: ResultsStepProps) {
 
   const containerVariants = {
     hidden: { opacity: 0 },
