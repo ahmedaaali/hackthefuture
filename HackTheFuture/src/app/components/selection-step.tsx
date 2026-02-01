@@ -345,7 +345,7 @@ export function SelectionStep({ fileName, onComplete, onBack }: SelectionStepPro
               style={{ opacity: 0.3 }}
             />
           )}
-          <span className="relative z-10">Generate Summary ✨</span>
+          <span className="relative z-10">Generate Summary</span>
         </motion.button>
       </div>
     </div>
