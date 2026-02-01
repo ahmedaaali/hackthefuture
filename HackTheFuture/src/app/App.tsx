@@ -116,7 +116,7 @@ function App() {
 
       {/* Header */}
       <header className="border-b border-teal-100 dark:border-gray-800 bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl sticky top-0 z-50 shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 py-5">
+        <div className="px-6 py-5">
           <motion.div
             className="flex items-center justify-between"
             initial={{ opacity: 0, y: -20 }}
