@@ -53,7 +53,7 @@ app.post('/api/analyze', upload.single('file'), async (req, res) => {
       return res.status(400).json({ error: 'No PDF file provided' });
     }
 
-    const { caregiverType, explanationLevel } = req.body;
+    const { caregiverType, explanationLevel, language = 'en' } = req.body;
 
     if (!caregiverType || !explanationLevel) {
       return res.status(400).json({ error: 'Missing caregiverType or explanationLevel' });
@@ -79,11 +79,21 @@ app.post('/api/analyze', upload.single('file'), async (req, res) => {
       'detailed': 'Provide comprehensive information including relevant medical terms (with explanations), specific measurements, and clinical details that would be helpful for someone who wants to understand the full picture.'
     };
 
+    const languageInstructions = {
+      'en': 'Respond in English.',
+      'es': 'Respond entirely in Spanish (Español). All text in the JSON response must be in Spanish.',
+      'zh': 'Respond entirely in Simplified Chinese (简体中文). All text in the JSON response must be in Chinese.',
+      'ar': 'Respond entirely in Arabic (العربية). All text in the JSON response must be in Arabic.',
+      'fr': 'Respond entirely in French (Français). All text in the JSON response must be in French.'
+    };
+
     const systemPrompt = `You are MediClarify, an AI assistant that helps caregivers understand medical documents. Your role is to transform complex medical information into clear, actionable guidance.
 
 You are creating a summary for ${caregiverDescriptions[caregiverType]}.
 
 ${levelDescriptions[explanationLevel]}
+
+IMPORTANT: ${languageInstructions[language] || languageInstructions['en']}
 
 You must respond with valid JSON only, no markdown formatting or code blocks. The JSON must have this exact structure:
 {

@@ -64,7 +64,7 @@ export function UploadStep({ onFileUpload }: UploadStepProps) {
           <Sparkles className="w-4 h-4" />
           AI-Powered Document Analysis
         </motion.div>
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Transform Medical Jargon into
           <span className="block bg-gradient-to-r from-teal-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent">
             Clear Instructions
@@ -204,25 +204,6 @@ export function UploadStep({ onFileUpload }: UploadStepProps) {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="mt-8 p-5 bg-amber-50/80 backdrop-blur-sm border border-amber-200 rounded-2xl"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-      >
-        <div className="flex gap-3">
-          <div className="w-5 h-5 rounded-full bg-amber-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-            <span className="text-xs text-amber-900 font-bold">!</span>
-          </div>
-          <div>
-            <p className="font-medium text-amber-900 mb-1">Privacy Note</p>
-            <p className="text-sm text-amber-800">
-              This is a demo application with mock responses. In a production version, your documents would be processed securely and never stored.
-            </p>
-          </div>
         </div>
       </motion.div>
     </div>
