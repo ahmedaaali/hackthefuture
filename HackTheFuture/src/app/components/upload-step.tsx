@@ -55,7 +55,7 @@ export function UploadStep({ onFileUpload }: UploadStepProps) {
         <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(15,118,110,0.18)_1px,transparent_1px)] [background-size:24px_24px]" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto min-h-screen px-4 sm:px-6 lg:px-8 -mt-6">
+      <div className="relative z-10 w-full min-h-screen px-4 sm:px-6 lg:px-8 -mt-6">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] items-center">
           <motion.div
             className="pt-4 lg:pt-8"
