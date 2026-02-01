@@ -1,23 +1,32 @@
 import { useState } from 'react';
-import { ChevronLeft, Users, GraduationCap, Heart, Baby, Stethoscope, BookOpen, Zap } from 'lucide-react';
+import { ChevronLeft, Users, GraduationCap, Heart, Baby, Stethoscope, BookOpen, Zap, Globe } from 'lucide-react';
 import { motion } from 'motion/react';
-import type { CaregiverType, ExplanationLevel } from '@/app/App';
+import type { CaregiverType, ExplanationLevel, Language } from '@/app/App';
 
 interface SelectionStepProps {
   fileName: string;
-  onComplete: (caregiverType: CaregiverType, explanationLevel: ExplanationLevel) => void;
+  onComplete: (caregiverType: CaregiverType, explanationLevel: ExplanationLevel, language: Language) => void;
   onBack: () => void;
 }
 
 export function SelectionStep({ fileName, onComplete, onBack }: SelectionStepProps) {
   const [caregiverType, setCaregiverType] = useState<CaregiverType | null>(null);
   const [explanationLevel, setExplanationLevel] = useState<ExplanationLevel | null>(null);
+  const [language, setLanguage] = useState<Language>('en');
 
   const handleSubmit = () => {
     if (caregiverType && explanationLevel) {
-      onComplete(caregiverType, explanationLevel);
+      onComplete(caregiverType, explanationLevel, language);
     }
   };
+
+  const languageOptions: { value: Language; label: string; flag: string }[] = [
+    { value: 'en', label: 'English', flag: '🇺🇸' },
+    { value: 'es', label: 'Español', flag: '🇪🇸' },
+    { value: 'zh', label: '中文', flag: '🇨🇳' },
+    { value: 'ar', label: 'العربية', flag: '🇸🇦' },
+    { value: 'fr', label: 'Français', flag: '🇫🇷' },
+  ];
 
   const caregiverOptions: { 
     value: CaregiverType; 
@@ -266,6 +275,43 @@ export function SelectionStep({ fileName, onComplete, onBack }: SelectionStepPro
                   </motion.button>
                 );
               })}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Language Selection */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl shadow-xl border border-teal-100/50 dark:border-gray-700 p-6 relative overflow-hidden">
+            <div className="flex items-center gap-3 mb-4 relative">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center shadow-lg shadow-violet-500/25">
+                <Globe className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Output Language</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Choose the language for your summary</p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {languageOptions.map((option) => (
+                <motion.button
+                  key={option.value}
+                  onClick={() => setLanguage(option.value)}
+                  className={`px-4 py-2 rounded-xl text-sm font-medium transition-all flex items-center gap-2 ${
+                    language === option.value
+                      ? 'bg-gradient-to-r from-violet-500 to-purple-500 text-white shadow-lg'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span>{option.flag}</span>
+                  <span>{option.label}</span>
+                </motion.button>
+              ))}
             </div>
           </div>
         </motion.div>
